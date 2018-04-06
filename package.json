@@ -38,5 +38,9 @@
   "bugs": {
     "url": "https://github.com/zemuldo/gps_parser/issues"
   },
-  "homepage": "https://github.com/zemuldo/gps_parser#readme"
+  "homepage": "https://github.com/zemuldo/gps_parser#readme",
+  "dependencies": {
+    "moment": "^2.22.0",
+    "moment-timezone": "^0.5.14"
+  }
 }
