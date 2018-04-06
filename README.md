@@ -13,6 +13,8 @@ let gpsPack = new Main(data);
   gpsPack.getLongitude(), -36.903733333333335;
   gpsPack.getSpeedKmH(), 181.57008000000002;
   gpsPack.getSpeedKnots(), 98.04;
+  gpsPack.getDateISO().toISOString(), '2018-03-17T12:56:01.000Z'
+  gpsPack.getRangeFromKnow(-1.21343, 36.92356), 2.2200929037438093
 
 ```
 
