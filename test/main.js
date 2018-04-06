@@ -95,6 +95,7 @@ test('Test Get Long Lat speed data ', t => {
   t.is(gpsPack.getLatitude(poles[0]), 1.21582);
   t.is(gpsPack.getLongitude(poles[1]), -36.903733333333335);
   t.is(gpsPack.getSpeedKmH(poles[1]), 181.57008000000002);
+  t.is(gpsPack.getSpeedKnots(poles[1]), 98.04);
 });
 
 test('Test Get Date Time data', t => {
@@ -104,10 +105,19 @@ test('Test Get Date Time data', t => {
   let gpsPack = new Main(data);
   let poles = gpsPack.getPoles();
   t.is(gpsPack.decode(), true);
-  t.is(gpsPack.getSpeedKnots(poles[1]), 98.04);
   t.deepEqual(gpsPack.getDateISO(), new Date(Date.parse(momment([2018, 2, 17, 15, 56, 1]).tz('Africa/Nairobi').format())));
   t.is(gpsPack.getDateISO().toISOString(), '2018-03-17T12:56:01.000Z');
   t.deepEqual(gpsPack.getDateArr(), [2018, 2, 17, 15, 56, 1]);
+});
+
+test('Test Range', t => {
+
+  let data = '*HQ,6028021806,V1,125601,A,0112.9492,S,03654.2240,E,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
+    
+  let gpsPack = new Main(data);
+  let poles = gpsPack.getPoles();
+  t.is(gpsPack.decode(), true);
+  t.is(gpsPack.getRangeFromKnow(-1.21343, 36.92356), 2.2200929037438093);
 });
 
 
