@@ -76,11 +76,24 @@ test('Test Get Pole orientation', t => {
 
 test('Test Get decoded data', t => {
 
-  let data = '*HQ,6028021806,V1,125601,A,0112.9492,N,03654.2240,W,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
+  let data = '*HQ,6028021806,V1,125601,A,0112.9492,S,03654.2240,E,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
           
   let gpsPack = new Main(data);
   t.is(gpsPack.decode(), true);
-  t.is(gpsPack.getLatitude(gpsPack.getPoles()[0]), true);
+  t.is(gpsPack.getLatitude(gpsPack.getPoles()[0]), -1.21582);
+  t.is(gpsPack.getLongitude(gpsPack.getPoles()[1]), 36.903733333333335);
+});
+
+test('Test Get decoded data', t => {
+
+  let data = '*HQ,6028021806,V1,125601,A,0112.9492,N,03654.2240,W,098.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
+            
+  let gpsPack = new Main(data);
+  t.is(gpsPack.decode(), true);
+  t.is(gpsPack.getLatitude(gpsPack.getPoles()[0]), 1.21582);
+  t.is(gpsPack.getLongitude(gpsPack.getPoles()[1]), -36.903733333333335);
+  t.is(gpsPack.getSpeedKmH(gpsPack.getPoles()[1]), 181.57008000000002);
+  t.is(gpsPack.getSpeedKnots(gpsPack.getPoles()[1]), 98.04);
 });
 
 
