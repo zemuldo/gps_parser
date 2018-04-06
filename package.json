@@ -1,0 +1,42 @@
+{
+  "name": "gps_parser",
+  "version": "1.0.0",
+  "description": "A JavaScript Library for handling and inteprating standard and custom gps eg NMEA types location messages. With google maps convertions, speed in km/h, range from given point, google reverse geocoding.  ",
+  "main": "main.js",
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-plugin-import": "^2.8.0",
+    "ava": "^0.25.0",
+    "nyc": "^11.3.0"
+  },
+  "scripts": {
+    "test": "eslint --fix lib/*.js test/** && nyc --reporter=html --reporter=lcov ava"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "source": [
+      "lib/**/*.{js}"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "powerAssert": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zemuldo/gps_parser.git"
+  },
+  "keywords": [
+    "gps",
+    "gpsparser",
+    "nmea"
+  ],
+  "author": "Danstan Otieno Onyango",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zemuldo/gps_parser/issues"
+  },
+  "homepage": "https://github.com/zemuldo/gps_parser#readme"
+}
