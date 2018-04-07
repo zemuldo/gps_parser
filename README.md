@@ -15,6 +15,9 @@ let gpsPack = new Main(data);
   gpsPack.getSpeedKnots(), 98.04;
   gpsPack.getDateISO().toISOString(), '2018-03-17T12:56:01.000Z'
   gpsPack.getRangeFromKnow(-1.21343, 36.92356), 2.2200929037438093
+  gpsPack.reverseGeoLocGoogle(process.env.GOOGLE_MAPS_API_KEY))
+    .then(o => Array of objects with all addresses ) ;
+    .catch(e => Error Object ) ;
 
 ```
 
