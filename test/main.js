@@ -152,6 +152,18 @@ test('Test Range', t => {
   let gpsPack = new Main(data);
   t.is(gpsPack.decode(), true);
   gpsPack.reverseGeoLocGoogle(process.env.GOOGLE_MAPS_API_KEY).then(o=>{
-    t.is(o.status,'OK');
+    t.is(o.status,'kljlkj');
   });
+});
+
+test('Test reverse geocoding google', t => {
+  let data = '*HQ,6028021806,V1,125601,A,0112.9492,S,03654.2240,E,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
+    
+  let gpsPack = new Main(data);
+  t.is(gpsPack.decode(), true);
+  
+  return Promise.resolve(gpsPack.reverseGeoLocGoogle(process.env.GOOGLE_MAPS_API_KEY))
+    .then(o => {
+      t.is(o.constructor, Array);
+    });
 });
