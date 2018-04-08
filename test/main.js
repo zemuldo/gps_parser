@@ -136,24 +136,15 @@ test('Test Get Date Time array', t => {
   t.deepEqual(gpsPack.dateArray, [2018,4,8,17,14,3]);
 });
 
-test('Test Get Date Time array', t => {
 
-  let data = '*HQ,6028022385,V1,171403,A,0114.5751,S,03639.7117,E,000.02,000,080418,FFFFBBFF,639,02,04104,12176,10,31#';
-
-  let gpsPack = new Main(data);
-  t.deepEqual(gpsPack.ownDate, new Date('2018-04-08 14:14:03 UTC'));
-});
 
 test('Test Get Date Time data', t => {
 
-  let data = '*HQ,6028022385,V1,171403,A,0114.5751,S,03639.7117,E,000.02,000,080418,FFFFBBFF,639,02,04104,12176,10,31#';
+  let data = '*HQ,6028022385,V1,173126,A,0114.5769,S,03639.7117,E,000.02,000,080418,FFFFBBFF,639,02,04104,12176,10,31#';
 
   let gpsPack = new Main(data);
-  t.deepEqual(gpsPack.date.toISOString(), new Date('2018-04-08 14:14:03 UTC').toISOString());
+  t.deepEqual(gpsPack.date.toISOString(), new Date('2018-04-08 17:31:26 UTC').toISOString());
 });
-
-
-
 
 test('Test Range', t => {
 
