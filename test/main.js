@@ -140,10 +140,10 @@ test('Test Get Date Time array', t => {
 
 test('Test Get Date Time data', t => {
 
-  let data = '*HQ,6028022385,V1,173126,A,0114.5769,S,03639.7117,E,000.02,000,080418,FFFFBBFF,639,02,04104,12176,10,31#';
+  let data = '*HQ,6028022385,V1,050939,A,0119.0437,S,03653.7440,E,000.28,000,090418,FFFFBBFF,639,02,04079,4425,10,29#';
 
   let gpsPack = new Main(data);
-  t.deepEqual(gpsPack.date.toISOString(), new Date('2018-04-08 17:31:26 UTC').toISOString());
+  t.deepEqual(gpsPack.date.toISOString(), new Date('2018-04-09 05:09:39 UTC').toISOString());
 });
 
 test('Test Range', t => {
@@ -154,14 +154,12 @@ test('Test Range', t => {
   t.is(gpsPack.getRangeFromKnow(-1.21343, 36.92356), 2.2200929037438093);
 });
 
-// test('Test reverse geocoding google', t => {
-//   let data = '*HQ,6028021806,V1,125601,A,0112.9492,S,03654.2240,E,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
+test('Test reverse geocoding google', t => {
+  let data = '*HQ,6028021806,V1,125601,A,0112.9492,S,03654.2240,E,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
 
-//   let gpsPack = new Main(data);
-//   t.is(gpsPack.decode(), true);
-
-//   return Promise.resolve(gpsPack.reverseGeoLocGoogle(process.env.GOOGLE_MAPS_API_KEY))
-//     .then(o => {
-//       t.is(o.constructor, Array);
-//     });
-// });
+  let gpsPack = new Main(data);
+  return Promise.resolve(gpsPack.reverseGeoLocGoogle(process.env.GOOGLE_MAPS_API_KEY))
+    .then(o => {
+      t.is(o.constructor, Array);
+    });
+});
