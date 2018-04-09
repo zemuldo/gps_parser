@@ -1,13 +1,24 @@
 # gps_parser
 
-Library for decoding gps data, Supports Nmea data format.
+Library for decoding gps data, Supports Nmea data format. Has google reverse geolocation support
+
+#Usage:
+
+
+```javascript
+
+  npm install --save gps_parser
+
+```
 
 Usage 
 
 ```javascript
+const parser = require('gps_parser')
+
 let data = '*HQ,6028021806,V1,125601,A,0112.9492,S,03654.2240,E,000.04,000,170218,FFF7BBFF,639,02,04009,12902,7,31#';
 
-let gpsPack = new Main(data);
+let gpsPack = new parser(data);
   gpsPack.isVoid, false;
   gpsPack.latitude, 1.21582;
   gpsPack.longitude, -36.903733333333335;
