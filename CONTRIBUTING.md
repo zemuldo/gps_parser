@@ -4,7 +4,7 @@ Before you contribute to the repo, you have to fork then make your changes to a 
 ## Creating Branch
 when creating a new branch, use year month and date at the end of the name
 ```
-git checkout -b feature_name-2107-08-21
+git checkout -b example_feature-2107-08-21
 
 ```
 
