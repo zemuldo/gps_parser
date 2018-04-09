@@ -1,6 +1,6 @@
 # gps_parser
 
-![Latest Version](https://img.shields.io/npm/v/gps_parser.svg?style=flat-square) 
+![Latest Version](https://img.shields.io/npm/v/gps_parser.svg?style=flat-square) ![Tavis CI Build Status](https://travis-ci.org/zemuldo/gps_parser.svg?branch=master)
 
 Library for decoding gps data, Supports Nmea data format. Has google reverse geolocation support
 
