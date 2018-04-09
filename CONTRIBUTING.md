@@ -8,6 +8,5 @@ git checkout -b devel-2107-08-21
 
 ```
 
-## To register an issue, you can do that right on the issues section of the repo [https://github.com/zemuldo/gps_parser/issues](here)
-
+## To [register](https://github.com/zemuldo/gps_parser/issues]) an issue, you can do that right on the issues section of the repo  [here](https://github.com/zemuldo/gps_parser/issues])
 For anything more reach me on otis.eng.555@gmail.com
