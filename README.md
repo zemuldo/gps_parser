@@ -2,7 +2,7 @@
 
 Library for decoding gps data, Supports Nmea data format. Has google reverse geolocation support
 
-#Usage:
+# Usage:
 
 
 ```javascript
@@ -10,8 +10,6 @@ Library for decoding gps data, Supports Nmea data format. Has google reverse geo
   npm install --save gps_parser
 
 ```
-
-Usage 
 
 ```javascript
 const parser = require('gps_parser')
