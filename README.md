@@ -1,5 +1,7 @@
 # gps_parser
 
+![Latest Version](https://img.shields.io/npm/v/gps_parser.svg?style=flat-square) 
+
 Library for decoding gps data, Supports Nmea data format. Has google reverse geolocation support
 
 # Usage:
