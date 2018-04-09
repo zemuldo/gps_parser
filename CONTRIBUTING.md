@@ -4,9 +4,9 @@ Before you contribute to the repo, you have to fork then make your changes to a 
 ## Creating Branch
 when creating a new branch, use year month and date at the end of the name
 ```
-git checkout -b devel-2107-08-21
+git checkout -b feature_name-2107-08-21
 
 ```
 
-## To [register](https://github.com/zemuldo/gps_parser/issues]) an issue, you can do that right on the issues section of the repo  [here](https://github.com/zemuldo/gps_parser/issues)
+## To register an issue, you can do that right on the [Issues](https://github.com/zemuldo/gps_parser/issues) section of the repo.
 For anything more reach me on otis.eng.555@gmail.com
